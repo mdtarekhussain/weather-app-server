@@ -24,7 +24,9 @@ app.get("/weather", async (req, res) => {
   const response = await axios.get(apiUrl);
   res.json(response.data);
 });
-
+app.get("/", async (req, res) => {
+  console.log("server is running");
+});
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
